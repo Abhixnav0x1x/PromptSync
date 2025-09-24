@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  /* Default to dark theme */
+  /* PromptSync brand gradient */
+  --background: #020024; /* fallback */
+  --background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(18, 0, 0, 1) 100%);
+  --foreground: #e5e7eb;
+}
+
+/* Explicit theme variants toggleable via document.documentElement.dataset.theme */
+[data-theme="dark"] {
+  /* Use the same gradient in dark mode */
+  --background: #020024; /* fallback */
+  --background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(18, 0, 0, 1) 100%);
+  --foreground: #e5e7eb;
+}
+
+[data-theme="light"] {
+  /* Use the same gradient in light mode */
+  --background: #020024; /* fallback */
+  --background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(18, 0, 0, 1) 100%);
+  --foreground: #0f172a; /* slate-900 */
+}
+
+/* Removed invalid @theme rule (Tailwind CSS doesn't support it) */
+
+/* Fallback to user's system preference on first load before JS sets data-theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Fallback while JS sets data-theme: use brand gradient */
+    --background: #020024; /* fallback */
+    --background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(18, 0, 0, 1) 100%);
+    --foreground: #111827;
+  }
+}
+
+body {
+  background: var(--background);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+html, body {
+  min-height: 100%;
+}
+
+/* Utility: hide scrollbars but keep scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Light theme component overrides */
+[data-theme="light"] .topbar {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="light"] .composebar {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(15, 23, 42, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .composebar textarea {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+/* Light theme: gradient background for compose textarea + white text */
+[data-theme="light"] .composebar .compose-textarea {
+  /* fallback */
+  background-color: #820e0e !important;
+  background-image: linear-gradient(90deg, rgba(130, 14, 14, 1) 0%, rgba(28, 15, 15, 1) 50%, rgba(12, 33, 130, 1) 100%) !important;
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+[data-theme="light"] .composebar .compose-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .composebar .icon-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+[data-theme="light"] .composebar .icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="light"] .response-card {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+/* Light theme: ensure response text uses dark color even if component sets a light text utility */
+[data-theme="light"] .response-card .response-content {
+  color: #0f172a !important;
+}
+
+/* Light theme: force white text in Settings page */
+[data-theme="light"] .settings-page, 
+[data-theme="light"] .settings-page * {
+  color: #ffffff !important;
+}
+[data-theme="light"] .settings-page input,
+[data-theme="light"] .settings-page textarea,
+[data-theme="light"] .settings-page select {
+  color: #ffffff !important;
+  caret-color: #ffffff;
+}
+[data-theme="light"] .settings-page input::placeholder,
+[data-theme="light"] .settings-page textarea::placeholder {
+  color: #ffffff !important;
+  opacity: 0.75;
+}
+
+/* Dark theme: Mobile sidebar full black theme */
+[data-theme="dark"] .mobilesidebar-panel {
+  background-color: #0b0b0b; /* near-black */
+  color: #e5e7eb;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .mobilesidebar-panel .ms-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #e5e7eb;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .mobilesidebar-panel .ms-card .text-gray-500 {
+  color: #9ca3af; /* neutral-400 */
+}
+[data-theme="dark"] .mobilesidebar-panel .text-gray-700 { color: #e5e7eb; }
+[data-theme="dark"] .mobilesidebar-panel .text-gray-900 { color: #f9fafb; }
+[data-theme="dark"] .mobilesidebar-panel .bg-gray-50 { background-color: rgba(255,255,255,0.04); }
+[data-theme="dark"] .mobilesidebar-panel .hover\:bg-gray-100:hover { background-color: rgba(255,255,255,0.06); }
+[data-theme="dark"] .mobilesidebar-footer {
+  background-color: #0b0b0b;
+  border-color: rgba(255, 255, 255, 0.08);
+}

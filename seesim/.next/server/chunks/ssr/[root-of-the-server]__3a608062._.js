@@ -1,0 +1,2353 @@
+module.exports = [
+"[externals]/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-page-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js"));
+
+module.exports = mod;
+}),
+"[project]/seesim/store/useAppStore.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "useAppStore",
+    ()=>useAppStore
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zustand/esm/react.mjs [app-ssr] (ecmascript)");
+"use client";
+;
+const useAppStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["create"])((set)=>({
+        llms: [],
+        setLLMs: (v)=>set({
+                llms: v
+            }),
+        responses: {},
+        setResponse: (id, r)=>set((s)=>({
+                    responses: {
+                        ...s.responses,
+                        [id]: {
+                            ...s.responses[id] ?? {
+                                id,
+                                status: "idle"
+                            },
+                            ...r
+                        }
+                    }
+                })),
+        selectedLLMIds: [],
+        setSelectedLLMIds: (ids)=>set({
+                selectedLLMIds: ids
+            }),
+        promptBoostLLMId: null,
+        setPromptBoostLLMId: (id)=>set({
+                promptBoostLLMId: id
+            })
+    }));
+}),
+"[externals]/stream [external] (stream, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("stream", () => require("stream"));
+
+module.exports = mod;
+}),
+"[externals]/http [external] (http, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("http", () => require("http"));
+
+module.exports = mod;
+}),
+"[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("url", () => require("url"));
+
+module.exports = mod;
+}),
+"[externals]/punycode [external] (punycode, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("punycode", () => require("punycode"));
+
+module.exports = mod;
+}),
+"[externals]/https [external] (https, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("https", () => require("https"));
+
+module.exports = mod;
+}),
+"[externals]/zlib [external] (zlib, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("zlib", () => require("zlib"));
+
+module.exports = mod;
+}),
+"[project]/seesim/lib/supabase/client.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "createSupabaseClient",
+    ()=>createSupabaseClient
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@supabase/ssr/dist/module/index.js [app-ssr] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createBrowserClient$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@supabase/ssr/dist/module/createBrowserClient.js [app-ssr] (ecmascript)");
+;
+function createSupabaseClient() {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createBrowserClient$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createBrowserClient"])(("TURBOPACK compile-time value", "https://uxihhmzuzlbjhjtpthtj.supabase.co"), ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4aWhobXp1emxiamhqdHB0aHRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU2ODI2MzcsImV4cCI6MjA3MTI1ODYzN30.Bo4zEabxLzhxDCj0j0FRAHDgiNNHqIKAHzCD7XnTqkE"));
+}
+}),
+"[project]/seesim/app/dashboard/components/PromptInputBar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>PromptInputBar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$lib$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/lib/supabase/client.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+function PromptInputBar({ prompt, onChange, onSubmit, disabled, onAttach, onNewChat, onSaveChat, initialAttachedName, onBoost }) {
+    const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [attachedName, setAttachedName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$lib$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createSupabaseClient"])();
+    // Sync attached name from parent (used when loading past conversations)
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (initialAttachedName) setAttachedName(initialAttachedName);
+        else setAttachedName(null);
+    }, [
+        initialAttachedName
+    ]);
+    async function compressImageToDataUrl(file, maxDim = 1280, quality = 0.85) {
+        const img = document.createElement("img");
+        const reader = new FileReader();
+        const loadFile = new Promise((resolve, reject)=>{
+            reader.onload = ()=>resolve(String(reader.result));
+            reader.onerror = ()=>reject(reader.error);
+            reader.readAsDataURL(file);
+        });
+        const dataUrl = await loadFile;
+        await new Promise((resolve, reject)=>{
+            img.onload = ()=>resolve();
+            img.onerror = ()=>reject(new Error("Image load failed"));
+            img.src = dataUrl;
+        });
+        const { width, height } = img;
+        const scale = Math.min(1, maxDim / Math.max(width, height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(width * scale);
+        canvas.height = Math.round(height * scale);
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return dataUrl;
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        // Prefer JPEG to reduce size, fallback to PNG if needed
+        const out = canvas.toDataURL("image/jpeg", quality);
+        return out || dataUrl;
+    }
+    function clearAttachment() {
+        setAttachedName(null);
+        if (fileInputRef.current) fileInputRef.current.value = "";
+        onAttach?.(null, null);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "composebar sticky bottom-0 z-30 border-t border-white/10 bg-black/70 backdrop-blur supports-[backdrop-filter]:bg-black/60",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto max-w-none p-3",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex flex-col gap-2",
+                children: [
+                    attachedName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-2 py-1 text-xs text-neutral-200 backdrop-blur",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex min-w-0 items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        width: "14",
+                                        height: "14",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        className: "shrink-0",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M21.44 11.05l-8.49 8.49a6 6 0 01-8.49-8.49l9.9-9.9a4 4 0 015.66 5.66l-9.9 9.9a2 2 0 01-2.83-2.83l8.49-8.49"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 68,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                        lineNumber: 67,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "truncate",
+                                        title: attachedName,
+                                        children: attachedName
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                        lineNumber: 70,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 65,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                "aria-label": "Remove attachment",
+                                title: "Remove attachment",
+                                onClick: clearAttachment,
+                                className: "ml-2 rounded border border-white/10 bg-neutral-900 px-2 py-0.5 text-[11px] text-neutral-200 hover:bg-white/5",
+                                children: "×"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 72,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                        lineNumber: 64,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                        value: prompt,
+                        onChange: (e)=>onChange(e.target.value),
+                        placeholder: "Enter a prompt...",
+                        className: "compose-textarea w-full resize-none min-h-[80px] rounded-lg p-3 border border-white/10 bg-neutral-900 text-neutral-100 placeholder:text-neutral-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40"
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                        lineNumber: 83,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        id: "compose-file-input",
+                        type: "file",
+                        accept: "image/*",
+                        className: "hidden",
+                        ref: fileInputRef,
+                        onChange: async (e)=>{
+                            const file = e.target.files?.[0];
+                            if (!file) {
+                                clearAttachment();
+                                return;
+                            }
+                            try {
+                                // Try uploading original file for best quality
+                                const path = `attachments/${Date.now()}_${Math.random().toString(36).slice(2)}_${file.name}`;
+                                const { error: upErr } = await supabase.storage.from("attachments").upload(path, file, {
+                                    cacheControl: "3600",
+                                    contentType: file.type || "application/octet-stream",
+                                    upsert: false
+                                });
+                                if (!upErr) {
+                                    const { data } = supabase.storage.from("attachments").getPublicUrl(path);
+                                    const publicUrl = data?.publicUrl;
+                                    if (publicUrl) {
+                                        setAttachedName(file.name);
+                                        onAttach?.(publicUrl, file);
+                                        return;
+                                    }
+                                }
+                                // Fallback to compressed data URL if storage not available
+                                const compressed = await compressImageToDataUrl(file, 1024, 0.7);
+                                setAttachedName(file.name);
+                                onAttach?.(compressed, file);
+                            } catch (err) {
+                                // Fallback to raw data URL if compression fails
+                                const fallbackReader = new FileReader();
+                                fallbackReader.onload = ()=>{
+                                    setAttachedName(file.name);
+                                    onAttach?.(String(fallbackReader.result), file);
+                                };
+                                fallbackReader.readAsDataURL(file);
+                            }
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                        lineNumber: 91,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                "aria-label": "Submit prompt",
+                                title: "Submit prompt",
+                                onClick: onSubmit,
+                                disabled: disabled,
+                                className: "submit-btn inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-600 text-white shadow-sm transition-all duration-200 hover:opacity-90 disabled:opacity-60",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "22",
+                                    height: "22",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M22 2L11 13"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 146,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M22 2L15 22l-4-9-9-4 20-7z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 147,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                    lineNumber: 145,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 137,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                "aria-label": "Prompt boost",
+                                title: "Prompt boost",
+                                onClick: onBoost,
+                                disabled: !onBoost,
+                                className: "icon-btn inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-neutral-900 text-neutral-200 transition-all duration-200 hover:bg-white/5 disabled:opacity-50",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "22",
+                                    height: "22",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M5 13l4 4"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 160,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M14 4s6 1 6 7-6 9-6 9-6-3-6-9 6-7 6-7z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 161,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                            cx: "12",
+                                            cy: "9",
+                                            r: "2"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 162,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                    lineNumber: 159,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 150,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                "aria-label": "Attach file",
+                                title: "Attach file",
+                                className: "icon-btn inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-neutral-900 text-neutral-200 transition-all duration-200 hover:bg-white/5",
+                                onClick: ()=>fileInputRef.current?.click(),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "22",
+                                    height: "22",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M21.44 11.05l-8.49 8.49a6 6 0 01-8.49-8.49l9.9-9.9a4 4 0 015.66 5.66l-9.9 9.9a2 2 0 01-2.83-2.83l8.49-8.49"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                        lineNumber: 174,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                    lineNumber: 173,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 165,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                "aria-label": "Start new chat",
+                                title: "Start new chat",
+                                className: "icon-btn inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-neutral-900 text-neutral-200 transition-all duration-200 hover:bg-white/5",
+                                onClick: ()=>{
+                                    clearAttachment();
+                                    onNewChat?.();
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "22",
+                                    height: "22",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "12",
+                                            y1: "5",
+                                            x2: "12",
+                                            y2: "19"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 186,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "5",
+                                            y1: "12",
+                                            x2: "19",
+                                            y2: "12"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 187,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                    lineNumber: 185,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 177,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                "aria-label": "Save chat",
+                                title: "Save chat",
+                                className: "icon-btn inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-neutral-900 text-neutral-200 transition-all duration-200 hover:bg-white/5",
+                                onClick: onSaveChat,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "22",
+                                    height: "22",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 199,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                            points: "17 21 17 13 7 13 7 21"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 200,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                            points: "7 3 7 8 15 8"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                            lineNumber: 201,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                    lineNumber: 198,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                                lineNumber: 190,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                        lineNumber: 136,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+            lineNumber: 61,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/seesim/app/dashboard/components/PromptInputBar.tsx",
+        lineNumber: 60,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/seesim/app/dashboard/components/ModelResponseCard.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ModelResponseCard
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+"use client";
+;
+function ModelResponseCard({ title, status, content, error, onContinue }) {
+    const badge = status === "success" ? "bg-green-500/15 text-green-300" : status === "error" ? "bg-red-500/15 text-red-300" : status === "loading" ? "bg-blue-500/15 text-blue-300" : "bg-white/10 text-neutral-300";
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "response-card min-w-[320px] max-w-[420px] h-full rounded-xl border border-white/10 bg-white/5 p-4 text-neutral-100 shadow-md backdrop-blur-md transition-shadow flex flex-col",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mb-2 flex items-center justify-between gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "truncate font-medium",
+                        title: title,
+                        children: title
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2",
+                        children: [
+                            onContinue && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                title: "Continue with this LLM",
+                                "aria-label": "Continue with this LLM",
+                                onClick: onContinue,
+                                className: "rounded border border-white/10 bg-neutral-900 p-1 text-neutral-200 hover:bg-white/5",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "16",
+                                    height: "16",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M9 18l6-6-6-6"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                        lineNumber: 37,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: `rounded px-2 py-0.5 text-xs ${badge}`,
+                                children: status === "success" ? "Success" : status === "error" ? "Error" : status === "loading" ? "Loading…" : "Idle"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative flex-1 min-h-0",
+                children: [
+                    status === "loading" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "animate-pulse space-y-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-4 w-3/5 rounded-md bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                lineNumber: 50,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-4 w-4/5 rounded-md bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                lineNumber: 51,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-24 w-full rounded-md bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                                lineNumber: 52,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 49,
+                        columnNumber: 11
+                    }, this),
+                    status !== "loading" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "response-content h-full overflow-y-auto no-scrollbar whitespace-pre-wrap text-sm text-neutral-200",
+                        children: status === "error" ? error : content || ""
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 56,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                lineNumber: 47,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mt-3 flex items-center gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>content && navigator.clipboard.writeText(content),
+                        className: "rounded border border-white/10 bg-neutral-900 px-2 py-1 text-xs text-neutral-200 transition-all hover:bg-white/5",
+                        children: "Copy"
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 63,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>{
+                            if (!content) return;
+                            const blob = new Blob([
+                                content
+                            ], {
+                                type: "text/plain;charset=utf-8"
+                            });
+                            const url = URL.createObjectURL(blob);
+                            const a = document.createElement("a");
+                            a.href = url;
+                            a.download = `${title.replace(/[^a-z0-9-_]/gi, "_")}.txt`;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                        },
+                        className: "rounded border border-white/10 bg-neutral-900 px-2 py-1 text-xs text-neutral-200 transition-all hover:bg-white/5",
+                        children: "Download"
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                        lineNumber: 69,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+                lineNumber: 62,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/seesim/app/dashboard/components/ModelResponseCard.tsx",
+        lineNumber: 23,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/seesim/app/dashboard/components/LLMModal.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LLMModal
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+function LLMModal({ open, onClose, onSave, saving, error }) {
+    const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        model_name: "",
+        api_key: "",
+        nickname: ""
+    });
+    // Clear inputs every time the modal opens
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (open) {
+            setForm({
+                model_name: "",
+                api_key: "",
+                nickname: ""
+            });
+        }
+    }, [
+        open
+    ]);
+    if (!open) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 grid place-items-center bg-black/30 p-4",
+        onClick: onClose,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "w-full max-w-md rounded-xl bg-black text-white p-6 shadow-lg",
+            onClick: (e)=>e.stopPropagation(),
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mb-3 text-lg font-semibold",
+                    children: "Add LLM"
+                }, void 0, false, {
+                    fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                    lineNumber: 27,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "space-y-3",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            className: "w-full rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-neutral-100 placeholder:text-neutral-400 outline-none focus:ring-2 focus:ring-indigo-500/40",
+                            placeholder: "Model name (e.g., openai/gpt-4o)",
+                            value: form.model_name,
+                            onChange: (e)=>setForm((f)=>({
+                                        ...f,
+                                        model_name: e.target.value
+                                    }))
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            className: "w-full rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-neutral-100 placeholder:text-neutral-400 outline-none focus:ring-2 focus:ring-indigo-500/40",
+                            placeholder: "API key",
+                            type: "password",
+                            value: form.api_key,
+                            onChange: (e)=>setForm((f)=>({
+                                        ...f,
+                                        api_key: e.target.value
+                                    }))
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                            lineNumber: 35,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            className: "w-full rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-neutral-100 placeholder:text-neutral-400 outline-none focus:ring-2 focus:ring-indigo-500/40",
+                            placeholder: "Nickname (optional)",
+                            value: form.nickname,
+                            onChange: (e)=>setForm((f)=>({
+                                        ...f,
+                                        nickname: e.target.value
+                                    }))
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, this),
+                        error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-sm text-red-600",
+                            children: error
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                            lineNumber: 48,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-end gap-2 pt-1",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: onClose,
+                                    className: "rounded px-3 py-1.5 text-sm transition-all hover:bg-white/10",
+                                    children: "Cancel"
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                                    lineNumber: 50,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    disabled: saving,
+                                    onClick: ()=>onSave(form),
+                                    className: "rounded bg-black px-3 py-1.5 text-sm text-white transition-all disabled:opacity-60",
+                                    children: saving ? "Saving…" : "Save"
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                                    lineNumber: 53,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                            lineNumber: 49,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+            lineNumber: 26,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/seesim/app/dashboard/components/LLMModal.tsx",
+        lineNumber: 25,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/seesim/app/dashboard/components/TopBar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>TopBar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+function TopBar({ onMenuClick }) {
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("light");
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const stored = "undefined" !== "undefined" && localStorage.getItem("theme");
+        const initial = stored ?? "light";
+        setTheme(initial);
+        document.documentElement.dataset.theme = initial;
+    }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        document.documentElement.dataset.theme = theme;
+        try {
+            localStorage.setItem("theme", theme);
+        } catch  {}
+    }, [
+        theme
+    ]);
+    const toggleTheme = ()=>setTheme((t)=>t === "dark" ? "light" : "dark");
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+        className: "topbar sticky top-0 z-40 border-b border-white/10 bg-black/60 text-white backdrop-blur supports-[backdrop-filter]:bg-black/50",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex w-full items-center justify-between px-4 py-3",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center gap-2",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            "aria-label": "Open menu",
+                            onClick: onMenuClick,
+                            className: "inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-neutral-200 transition-colors hover:bg-white/5",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "i-[hamburger] block h-4 w-4",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    className: "h-5 w-5",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        d: "M4 6h16M4 12h16M4 18h16"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                        lineNumber: 38,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                    lineNumber: 37,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                lineNumber: 36,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                            lineNumber: 31,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-3xl md:text-4xl font-bold tracking-tight",
+                            children: "SeeSim"
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center gap-3",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: toggleTheme,
+                        className: "inline-flex items-center gap-1 rounded-md border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-neutral-200 transition-colors hover:bg-white/5",
+                        "aria-label": "Toggle theme",
+                        title: "Toggle theme",
+                        children: theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "inline-flex items-center gap-1",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 24 24",
+                                    fill: "currentColor",
+                                    className: "h-4 w-4",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M21.752 15.002A9.718 9.718 0 0 1 12 21.75a9.75 9.75 0 0 1 0-19.5c.845 0 1.663.11 2.443.316a.75.75 0 0 1 .164 1.384A7.5 7.5 0 0 0 20.25 15.12a.75.75 0 0 1 1.502-.118Z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                        lineNumber: 52,
+                                        columnNumber: 164
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                    lineNumber: 52,
+                                    columnNumber: 64
+                                }, this),
+                                "Dark"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                            lineNumber: 52,
+                            columnNumber: 15
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "inline-flex items-center gap-1",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 24 24",
+                                    fill: "currentColor",
+                                    className: "h-4 w-4",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M12 2.25a.75.75 0 0 1 .75.75V5a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Zm0 13.5a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5ZM4.5 12a.75.75 0 0 1 .75-.75H7a.75.75 0 0 1 0 1.5H5.25A.75.75 0 0 1 4.5 12Zm13.5 0a.75.75 0 0 1 .75-.75H19a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-9.9 6.15a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.061 1.061l-1.06-1.06a.75.75 0 0 1 0-1.061Zm8.485 0a.75.75 0 0 1 1.061 0l1.06 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                        lineNumber: 54,
+                                        columnNumber: 164
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                                    lineNumber: 54,
+                                    columnNumber: 64
+                                }, this),
+                                "Light"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                            lineNumber: 54,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                        lineNumber: 45,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+            lineNumber: 29,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/seesim/app/dashboard/components/TopBar.tsx",
+        lineNumber: 28,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[externals]/next/dist/server/app-render/action-async-storage.external.js [external] (next/dist/server/app-render/action-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/action-async-storage.external.js", () => require("next/dist/server/app-render/action-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/work-unit-async-storage.external.js [external] (next/dist/server/app-render/work-unit-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-unit-async-storage.external.js", () => require("next/dist/server/app-render/work-unit-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/work-async-storage.external.js [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-async-storage.external.js", () => require("next/dist/server/app-render/work-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[project]/seesim/app/dashboard/components/MobileSidebar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>MobileSidebar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$store$2f$useAppStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/store/useAppStore.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+function MobileSidebar({ open, onClose, email, llms, onAdd, onDelete }) {
+    const [convos, setConvos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const { selectedLLMIds, setSelectedLLMIds } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$store$2f$useAppStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAppStore"])();
+    const [selectorOpen, setSelectorOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        async function load() {
+            try {
+                const res = await fetch("/api/conversations");
+                const j = res.ok ? await res.json() : {
+                    conversations: []
+                };
+                const local = JSON.parse(localStorage.getItem("seesim_conversations") || "[]");
+                // Normalize arrays
+                const remoteArr = Array.isArray(j.conversations) ? j.conversations : [];
+                const localArr = Array.isArray(local) ? local : [];
+                // Build a stable key: prefer id; fallback to prompt|created_at
+                const byKey = {};
+                const add = (c, prefer = false)=>{
+                    if (!c) return;
+                    const prompt = typeof c.prompt === "string" ? c.prompt : "";
+                    const created = c.created_at || c.createdAt || "";
+                    const id = typeof c.id === "string" && c.id ? c.id : `${prompt}|${created}`;
+                    if (prefer || !(id in byKey)) byKey[id] = c;
+                };
+                // Local first
+                for (const c of localArr)add(c, false);
+                // Remote overwrites local duplicates
+                for (const c of remoteArr)add(c, true);
+                // Sort by created_at desc and filter duplicates by identical prompt text
+                const merged = Object.values(byKey).sort((a, b)=>{
+                    const ta = new Date(a.created_at || a.createdAt || 0).getTime();
+                    const tb = new Date(b.created_at || b.createdAt || 0).getTime();
+                    return tb - ta;
+                });
+                const seenPrompt = new Set();
+                const uniqByPrompt = merged.filter((c)=>{
+                    const p = typeof c.prompt === "string" ? c.prompt.trim() : "";
+                    if (!p) return true; // keep empties
+                    if (seenPrompt.has(p)) return false;
+                    seenPrompt.add(p);
+                    return true;
+                });
+                setConvos(uniqByPrompt.slice(0, 10));
+            } catch  {}
+        }
+        if (open) load();
+    }, [
+        open
+    ]);
+    async function openConversationById(id) {
+        // Try localStorage first (usually contains full results)
+        const local = JSON.parse(localStorage.getItem("seesim_conversations") || "[]");
+        let conv = local.find((c)=>c.id === id);
+        if (!conv) {
+            try {
+                const res = await fetch(`/api/conversations/${id}`);
+                if (res.ok) conv = await res.json();
+            } catch  {}
+        }
+        if (!conv) return;
+        // Dispatch event for Dashboard to consume
+        window.dispatchEvent(new CustomEvent("load_conversation", {
+            detail: conv
+        }));
+        onClose();
+    }
+    async function deleteConversation(id) {
+        try {
+            await fetch(`/api/conversations/${id}`, {
+                method: "DELETE"
+            });
+        } catch  {}
+        // remove from local storage
+        const local = JSON.parse(localStorage.getItem("seesim_conversations") || "[]");
+        const filtered = local.filter((c)=>c.id !== id);
+        localStorage.setItem("seesim_conversations", JSON.stringify(filtered));
+        setConvos((s)=>s.filter((x)=>x.id !== id));
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `fixed inset-0 z-50 ${open ? "pointer-events-auto" : "pointer-events-none"}`,
+        "aria-hidden": !open,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute inset-0 bg-black/30 transition-opacity duration-200 ${open ? "opacity-100" : "opacity-0"}`,
+                onClick: onClose
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                lineNumber: 97,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `mobilesidebar-panel absolute inset-y-0 left-0 w-[85%] max-w-[320px] transform bg-white shadow-xl transition-transform duration-200 ${open ? "translate-x-0" : "-translate-x-full"}`,
+                role: "dialog",
+                "aria-modal": "true",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between border-b px-4 py-3",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "font-semibold text-gray-900",
+                                children: "Menu"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 108,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setSelectorOpen(true),
+                                "aria-label": "Select active LLMs",
+                                title: "Select active LLMs",
+                                className: "rounded-md border border-blue-900 bg-blue-900 px-2 py-1 text-sm text-white hover:bg-blue-800",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "16",
+                                    height: "16",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "4",
+                                            y1: "21",
+                                            x2: "4",
+                                            y2: "14"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 156
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "4",
+                                            y1: "10",
+                                            x2: "4",
+                                            y2: "3"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 193
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "12",
+                                            y1: "21",
+                                            x2: "12",
+                                            y2: "12"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 229
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "12",
+                                            y1: "8",
+                                            x2: "12",
+                                            y2: "3"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 268
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "20",
+                                            y1: "21",
+                                            x2: "20",
+                                            y2: "16"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 305
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "20",
+                                            y1: "12",
+                                            x2: "20",
+                                            y2: "3"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 344
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "2",
+                                            y1: "14",
+                                            x2: "6",
+                                            y2: "14"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 382
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "10",
+                                            y1: "8",
+                                            x2: "14",
+                                            y2: "8"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 419
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "18",
+                                            y1: "16",
+                                            x2: "22",
+                                            y2: "16"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 456
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 111,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 109,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "h-full overflow-y-auto p-4 pb-20",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-col space-y-4 text-sm text-gray-700",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "ms-card rounded-md bg-gray-50 p-3 shadow-sm",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "truncate font-medium",
+                                        title: email,
+                                        children: email
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                        lineNumber: 117,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 116,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "ms-card rounded-md bg-gray-50 p-3 shadow-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-2 text-xs uppercase text-gray-500",
+                                            children: "Past Conversations"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 122,
+                                            columnNumber: 15
+                                        }, this),
+                                        convos.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-xs text-gray-500",
+                                            children: "No conversations"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 124,
+                                            columnNumber: 17
+                                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-1",
+                                            children: convos.map((c, idx)=>{
+                                                const key = c?.id || `${c?.prompt || ""}|${c?.created_at || c?.createdAt || ""}|${idx}`;
+                                                const hasId = typeof c?.id === "string" && c.id.length > 0;
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    className: "flex items-center justify-between gap-2 truncate",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                            onClick: ()=>hasId && openConversationById(c.id),
+                                                            className: "truncate text-left hover:underline disabled:opacity-50",
+                                                            title: c.prompt,
+                                                            disabled: !hasId,
+                                                            children: c.prompt
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                            lineNumber: 132,
+                                                            columnNumber: 25
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                            onClick: ()=>hasId && deleteConversation(c.id),
+                                                            className: "rounded px-2 py-0.5 text-xs text-red-600 hover:bg-red-50 disabled:opacity-50",
+                                                            "aria-label": "Delete conversation",
+                                                            title: "Delete conversation",
+                                                            disabled: !hasId,
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                width: "16",
+                                                                height: "16",
+                                                                viewBox: "0 0 24 24",
+                                                                fill: "none",
+                                                                stroke: "currentColor",
+                                                                strokeWidth: "2",
+                                                                strokeLinecap: "round",
+                                                                strokeLinejoin: "round",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                                                        points: "3 6 5 6 21 6"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                        lineNumber: 148,
+                                                                        columnNumber: 170
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                        lineNumber: 148,
+                                                                        columnNumber: 203
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M10 11v6"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                        lineNumber: 148,
+                                                                        columnNumber: 258
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M14 11v6"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                        lineNumber: 148,
+                                                                        columnNumber: 278
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                        lineNumber: 148,
+                                                                        columnNumber: 298
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                                lineNumber: 148,
+                                                                columnNumber: 27
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                            lineNumber: 140,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    ]
+                                                }, key, true, {
+                                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                    lineNumber: 131,
+                                                    columnNumber: 23
+                                                }, this);
+                                            })
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 126,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 121,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                            lineNumber: 115,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                        lineNumber: 114,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mobilesidebar-footer absolute bottom-0 left-0 right-0 border-t bg-white px-4 py-3",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/dashboard/settings",
+                            className: "flex w-full items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm transition-all hover:bg-gray-100",
+                            onClick: onClose,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "16",
+                                    height: "16",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                            cx: "12",
+                                            cy: "12",
+                                            r: "3"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 165,
+                                            columnNumber: 156
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .7.4 1.31 1 1.61.6.3 1 .91 1 1.61s-.4 1.31-1 1.61c-.6.3-1 .91-1 1.61z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 165,
+                                            columnNumber: 187
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 165,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    children: "Settings"
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 166,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                            lineNumber: 160,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                        lineNumber: 159,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                lineNumber: 102,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute inset-0 ${selectorOpen ? "pointer-events-auto" : "pointer-events-none"}`,
+                "aria-hidden": selectorOpen ? "false" : "true",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: `absolute inset-0 transition-opacity ${selectorOpen ? "opacity-100" : "opacity-0"}`,
+                    style: {
+                        backgroundColor: "rgba(0,0,0,0.25)"
+                    },
+                    onClick: ()=>setSelectorOpen(false)
+                }, void 0, false, {
+                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                    lineNumber: 176,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                lineNumber: 172,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute inset-y-0 left-0 z-50 w-[85%] max-w-[320px] transform bg-white shadow-2xl transition-transform duration-200 ${selectorOpen ? "translate-x-0" : "-translate-x-full"}`,
+                role: "dialog",
+                "aria-modal": "true",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between border-b px-4 py-3",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "font-semibold text-gray-900",
+                                children: "Active LLMs"
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 190,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setSelectorOpen(false),
+                                "aria-label": "Close",
+                                title: "Close",
+                                className: "rounded-md border px-2 py-1 text-sm bg-gray-100 hover:bg-gray-200",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "14",
+                                    height: "14",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "18",
+                                            y1: "6",
+                                            x2: "6",
+                                            y2: "18"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 193,
+                                            columnNumber: 156
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "6",
+                                            y1: "6",
+                                            x2: "18",
+                                            y2: "18"
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                            lineNumber: 193,
+                                            columnNumber: 193
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                    lineNumber: 193,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 191,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                        lineNumber: 189,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "h-full overflow-y-auto p-4 pb-20 text-sm text-gray-700",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "ms-card rounded-md bg-gray-50 p-3 shadow-sm",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-2 text-xs uppercase text-gray-500",
+                                        children: "Choose responders"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                        lineNumber: 198,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                        className: "space-y-2",
+                                        children: llms.map((l)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                className: "flex items-center justify-between gap-2",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "flex items-center gap-2 truncate",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                            type: "checkbox",
+                                                            checked: selectedLLMIds.includes(l.id),
+                                                            onChange: ()=>{
+                                                                const curr = new Set(selectedLLMIds || []);
+                                                                if (curr.has(l.id)) curr.delete(l.id);
+                                                                else curr.add(l.id);
+                                                                const arr = Array.from(curr);
+                                                                setSelectedLLMIds(arr);
+                                                                localStorage.setItem("seesim_selected_llms", JSON.stringify(arr));
+                                                            }
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                            lineNumber: 203,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "truncate",
+                                                            title: l.model_name,
+                                                            children: l.nickname || l.model_name
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                            lineNumber: 214,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                    lineNumber: 202,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, l.id, false, {
+                                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                                lineNumber: 201,
+                                                columnNumber: 17
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                        lineNumber: 199,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 197,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-4 text-xs text-gray-500",
+                                children: "Changes are saved automatically."
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                                lineNumber: 220,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                        lineNumber: 196,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+                lineNumber: 184,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/seesim/app/dashboard/components/MobileSidebar.tsx",
+        lineNumber: 93,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/seesim/app/dashboard/DashboardClient.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>DashboardClient
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$store$2f$useAppStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/store/useAppStore.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$PromptInputBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/app/dashboard/components/PromptInputBar.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$ModelResponseCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/app/dashboard/components/ModelResponseCard.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$LLMModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/app/dashboard/components/LLMModal.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$TopBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/app/dashboard/components/TopBar.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$MobileSidebar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/seesim/app/dashboard/components/MobileSidebar.tsx [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+;
+;
+;
+;
+function DashboardClient({ email, initialLlms }) {
+    const { llms, setLLMs, responses, setResponse, selectedLLMIds, setSelectedLLMIds, promptBoostLLMId, setPromptBoostLLMId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$store$2f$useAppStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAppStore"])();
+    const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [saving, setSaving] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [prompt, setPrompt] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [sending, setSending] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [navOpen, setNavOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [attachedImage, setAttachedImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [attachedName, setAttachedName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [attachedType, setAttachedType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [fullScreen, setFullScreen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    // initialize from server
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        setLLMs(initialLlms);
+        // initialize selection from localStorage if not set
+        const saved = JSON.parse(localStorage.getItem("seesim_selected_llms") || "[]");
+        if (Array.isArray(saved) && saved.length) {
+            setSelectedLLMIds(saved.filter((id)=>initialLlms.some((l)=>l.id === id)));
+        } else {
+            // default to all
+            setSelectedLLMIds((initialLlms || []).map((l)=>l.id));
+        }
+        // initialize prompt boost from localStorage if present
+        const savedBoost = localStorage.getItem("seesim_prompt_boost_llm");
+        if (savedBoost) setPromptBoostLLMId(savedBoost);
+    }, [
+        initialLlms,
+        setLLMs
+    ]);
+    async function boostPrompt() {
+        if (!promptBoostLLMId || !prompt.trim()) return;
+        try {
+            setSending(true);
+            const res = await fetch("/api/boost", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    prompt,
+                    llm_id: promptBoostLLMId
+                })
+            });
+            if (!res.ok) throw new Error(await res.text());
+            const j = await res.json();
+            if (j && typeof j.prompt === "string" && j.prompt.trim()) {
+                setPrompt(j.prompt);
+            }
+        } catch (e) {
+            console.error("Boost error", e);
+        } finally{
+            setSending(false);
+        }
+    }
+    // Listen for conversation load events from MobileSidebar
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        function onLoadConv(e) {
+            const conv = e?.detail;
+            if (!conv) return;
+            // Populate prompt
+            setPrompt(conv.prompt || "");
+            // Restore attachment info
+            setAttachedImage(conv.image_url || null);
+            setAttachedName(conv.file_name || null);
+            setAttachedType(conv.file_type || null);
+            // Populate responses
+            if (Array.isArray(conv.results)) {
+                for (const r of conv.results){
+                    if (r?.id) {
+                        if (r.status === "success") {
+                            setResponse(r.id, {
+                                id: r.id,
+                                model_name: r.model_name,
+                                nickname: r.nickname,
+                                status: "success",
+                                content: r.content
+                            });
+                        } else if (r.status === "error") {
+                            setResponse(r.id, {
+                                id: r.id,
+                                status: "error",
+                                error: r.error
+                            });
+                        }
+                    }
+                }
+            }
+            setFullScreen(true);
+        }
+        window.addEventListener("load_conversation", onLoadConv);
+        return ()=>window.removeEventListener("load_conversation", onLoadConv);
+    }, [
+        setResponse
+    ]);
+    async function saveChatExplicit() {
+        // Collect current responses for all LLMs (success or error)
+        const resultsArr = [];
+        for (const l of llms){
+            const r = responses[l.id];
+            if (!r || r.status === "idle" || r.status === "loading") continue;
+            resultsArr.push({
+                id: l.id,
+                model_name: l.model_name,
+                nickname: l.nickname,
+                status: r.status,
+                content: r.content,
+                error: r.error
+            });
+        }
+        if (!prompt.trim() && !resultsArr.length) return; // nothing to save
+        const conv = {
+            prompt,
+            results: resultsArr,
+            image_url: attachedImage,
+            file_name: attachedName,
+            file_type: attachedType,
+            created_at: new Date().toISOString()
+        };
+        try {
+            const res = await fetch("/api/conversations", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(conv)
+            });
+            if (res.ok) {
+                const { id, created_at } = await res.json();
+                conv.id = id;
+                conv.created_at = created_at || conv.created_at;
+            }
+        } catch  {}
+        // Persist to localStorage regardless (best-effort)
+        const local = JSON.parse(localStorage.getItem("seesim_conversations") || "[]");
+        local.unshift(conv);
+        localStorage.setItem("seesim_conversations", JSON.stringify(local.slice(0, 50)));
+    }
+    async function startNewChat() {
+        // Save current chat then clear UI
+        await saveChatExplicit();
+        // Clear prompt and attachments
+        setPrompt("");
+        setAttachedImage(null);
+        setAttachedName(null);
+        setAttachedType(null);
+        // Reset responses to idle
+        for (const l of llms){
+            setResponse(l.id, {
+                id: l.id,
+                model_name: l.model_name,
+                nickname: l.nickname,
+                status: "idle",
+                content: undefined,
+                error: undefined
+            });
+        }
+    }
+    async function refreshLLMs() {
+        const res = await fetch("/api/llms");
+        if (res.ok) {
+            const json = await res.json();
+            setLLMs(json.llms);
+        }
+    }
+    async function addLLM(form) {
+        setSaving(true);
+        setError(null);
+        const res = await fetch("/api/llms", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(form)
+        });
+        setSaving(false);
+        if (!res.ok) {
+            const t = await res.text();
+            setError(t);
+            return;
+        }
+        setIsModalOpen(false);
+        refreshLLMs();
+    }
+    async function removeLLM(id) {
+        const prev = [
+            ...llms
+        ];
+        // optimistic update
+        setLLMs(llms.filter((l)=>l.id !== id));
+        try {
+            const res = await fetch(`/api/llms/${id}`, {
+                method: "DELETE"
+            });
+            if (!res.ok) {
+                // rollback on failure
+                setLLMs(prev);
+                const msg = await res.text();
+                console.error("Failed to delete LLM:", msg);
+                // best-effort refresh
+                refreshLLMs();
+            } else {
+                // ensure in sync
+                refreshLLMs();
+            }
+        } catch (e) {
+            setLLMs(prev);
+            console.error("Delete error:", e);
+            refreshLLMs();
+        }
+    }
+    const orderedResponses = (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return (llms || []).map((l)=>responses[l.id]).filter((r)=>r && r.status && r.status !== "idle");
+    }, [
+        llms,
+        responses
+    ]);
+    async function continueWithLLM(id, reply) {
+        if (!reply || !reply.trim()) return;
+        // Save current chat
+        await saveChatExplicit();
+        // Focus on single LLM and set the reply as the next prompt
+        setPrompt(reply);
+        setSelectedLLMIds([
+            id
+        ]);
+        localStorage.setItem("seesim_selected_llms", JSON.stringify([
+            id
+        ]));
+        // Reset responses to idle (so the next run shows fresh loading states only for the chosen LLM)
+        for (const l of llms){
+            const st = l.id === id ? "idle" : "idle";
+            setResponse(l.id, {
+                id: l.id,
+                model_name: l.model_name,
+                nickname: l.nickname,
+                status: st,
+                content: undefined,
+                error: undefined
+            });
+        }
+        // Ensure state is applied then send
+        setTimeout(()=>{
+            sendPrompt();
+        }, 0);
+    }
+    async function sendPrompt() {
+        if (!prompt.trim()) return;
+        setSending(true);
+        // Only selected LLMs will be used
+        const activeIds = selectedLLMIds && selectedLLMIds.length ? selectedLLMIds : llms.map((l)=>l.id);
+        const active = llms.filter((l)=>activeIds.includes(l.id));
+        // set only selected to loading
+        for (const l of active){
+            setResponse(l.id, {
+                id: l.id,
+                model_name: l.model_name,
+                nickname: l.nickname,
+                status: "loading",
+                content: undefined,
+                error: undefined
+            });
+        }
+        try {
+            const res = await fetch("/api/compare", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    prompt,
+                    image: attachedImage,
+                    selected_ids: active.map((l)=>l.id)
+                })
+            });
+            if (!res.ok) throw new Error(await res.text());
+            const json = await res.json();
+            for (const r of json.results){
+                if (r.status === "success") {
+                    setResponse(r.id, {
+                        id: r.id,
+                        model_name: r.model_name,
+                        nickname: r.nickname,
+                        status: "success",
+                        content: r.content
+                    });
+                } else {
+                    setResponse(r.id, {
+                        id: r.id,
+                        status: "error",
+                        error: r.error
+                    });
+                }
+            }
+            // Persist conversation (prompt + results) to DB and localStorage
+            try {
+                const payload = {
+                    prompt,
+                    results: json.results,
+                    image_url: attachedImage,
+                    file_name: attachedName,
+                    file_type: attachedType
+                };
+                const save = await fetch("/api/conversations", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+                let conv = {
+                    prompt,
+                    results: json.results,
+                    created_at: new Date().toISOString()
+                };
+                if (save.ok) {
+                    const { id, created_at } = await save.json();
+                    conv.id = id;
+                    conv.created_at = created_at || conv.created_at;
+                }
+                const local = JSON.parse(localStorage.getItem("seesim_conversations") || "[]");
+                local.unshift({
+                    ...conv,
+                    image_url: attachedImage,
+                    file_name: attachedName,
+                    file_type: attachedType
+                });
+                localStorage.setItem("seesim_conversations", JSON.stringify(local.slice(0, 50)));
+            } catch  {}
+        } catch (e) {
+            for (const l of active)setResponse(l.id, {
+                id: l.id,
+                status: "error",
+                error: String(e.message || e)
+            });
+        } finally{
+            setSending(false);
+            setFullScreen(true);
+        }
+    }
+    function toggleSelected(id) {
+        const curr = new Set(selectedLLMIds || []);
+        if (curr.has(id)) curr.delete(id);
+        else curr.add(id);
+        const arr = Array.from(curr);
+        setSelectedLLMIds(arr);
+        localStorage.setItem("seesim_selected_llms", JSON.stringify(arr));
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "min-h-dvh",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$TopBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                onMenuClick: ()=>setNavOpen(true)
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                lineNumber: 279,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$MobileSidebar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                open: navOpen,
+                onClose: ()=>setNavOpen(false),
+                email: email,
+                llms: llms,
+                onAdd: ()=>{
+                    setNavOpen(false);
+                    setIsModalOpen(true);
+                },
+                onDelete: removeLLM
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                lineNumber: 280,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex min-h-dvh flex-col",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+                        className: "flex-1 p-4",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mx-auto max-w-none h-full min-h-0 flex flex-col relative",
+                            children: [
+                                !fullScreen && orderedResponses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setFullScreen(true),
+                                    "aria-label": "Enter fullscreen",
+                                    title: "Enter fullscreen",
+                                    className: "absolute right-0 top-0 z-10 rounded border border-white/10 bg-black/30 p-1.5 text-neutral-200 backdrop-blur hover:bg-white/10",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        width: "18",
+                                        height: "18",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                                points: "15 3 21 3 21 9"
+                                            }, void 0, false, {
+                                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                lineNumber: 304,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                                points: "9 21 3 21 3 15"
+                                            }, void 0, false, {
+                                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                lineNumber: 305,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                                x1: "21",
+                                                y1: "3",
+                                                x2: "14",
+                                                y2: "10"
+                                            }, void 0, false, {
+                                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                lineNumber: 306,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                                x1: "3",
+                                                y1: "21",
+                                                x2: "10",
+                                                y2: "14"
+                                            }, void 0, false, {
+                                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                lineNumber: 307,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 303,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                    lineNumber: 296,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex-1 min-h-0 overflow-x-auto overflow-y-hidden no-scrollbar pt-2",
+                                    children: orderedResponses.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex h-full items-stretch gap-4 pr-4",
+                                        children: orderedResponses.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "min-w-[320px] max-w-[420px] h-full",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$ModelResponseCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                    title: r.nickname || r.model_name || "Model",
+                                                    status: r.status,
+                                                    content: r.content,
+                                                    error: r.error,
+                                                    onContinue: ()=>continueWithLLM(r.id, r.content)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                    lineNumber: 316,
+                                                    columnNumber: 23
+                                                }, this)
+                                            }, r.id, false, {
+                                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                                lineNumber: 315,
+                                                columnNumber: 21
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 313,
+                                        columnNumber: 17
+                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex h-full items-center justify-center text-sm text-neutral-400",
+                                        children: "Ask something to get started."
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 327,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                    lineNumber: 311,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                            lineNumber: 294,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                        lineNumber: 293,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$PromptInputBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        prompt: prompt,
+                        onChange: setPrompt,
+                        onSubmit: sendPrompt,
+                        disabled: sending,
+                        initialAttachedName: attachedName || undefined,
+                        onBoost: promptBoostLLMId ? boostPrompt : undefined,
+                        onAttach: (dataUrl, file)=>{
+                            setAttachedImage(dataUrl || null);
+                            setAttachedName(file?.name || null);
+                            setAttachedType(file?.type || null);
+                        },
+                        onNewChat: startNewChat,
+                        onSaveChat: saveChatExplicit
+                    }, void 0, false, {
+                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                        lineNumber: 334,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                lineNumber: 292,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$LLMModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                open: isModalOpen,
+                onClose: ()=>setIsModalOpen(false),
+                onSave: addLLM,
+                saving: saving,
+                error: error
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                lineNumber: 351,
+                columnNumber: 7
+            }, this),
+            fullScreen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 z-50 bg-black/80 p-4 backdrop-blur-sm",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative mx-auto h-full max-w-7xl",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>setFullScreen(false),
+                            "aria-label": "Exit fullscreen",
+                            title: "Exit fullscreen",
+                            className: "absolute right-0 top-0 z-10 rounded border border-white/10 bg-black/30 p-1.5 text-neutral-200 backdrop-blur hover:bg-white/10",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                width: "18",
+                                height: "18",
+                                viewBox: "0 0 24 24",
+                                fill: "none",
+                                stroke: "currentColor",
+                                strokeWidth: "2",
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                        points: "9 3 3 3 3 9"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 365,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                        points: "15 21 21 21 21 15"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 366,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                        x1: "3",
+                                        y1: "3",
+                                        x2: "10",
+                                        y2: "10"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 367,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                        x1: "21",
+                                        y1: "21",
+                                        x2: "14",
+                                        y2: "14"
+                                    }, void 0, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 368,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                lineNumber: 364,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                            lineNumber: 357,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "h-full overflow-x-auto overflow-y-hidden no-scrollbar pt-2",
+                            children: orderedResponses.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex h-full items-stretch gap-4 pr-4",
+                                children: orderedResponses.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "min-w-[320px] max-w-[420px] h-full",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$app$2f$dashboard$2f$components$2f$ModelResponseCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                            title: r.nickname || r.model_name || "Model",
+                                            status: r.status,
+                                            content: r.content,
+                                            error: r.error,
+                                            onContinue: ()=>continueWithLLM(r.id, r.content)
+                                        }, void 0, false, {
+                                            fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                            lineNumber: 376,
+                                            columnNumber: 23
+                                        }, this)
+                                    }, r.id, false, {
+                                        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                        lineNumber: 375,
+                                        columnNumber: 21
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                lineNumber: 373,
+                                columnNumber: 17
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$seesim$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex h-full items-center justify-center text-sm text-neutral-400",
+                                children: "No results yet."
+                            }, void 0, false, {
+                                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                                lineNumber: 387,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                            lineNumber: 371,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                    lineNumber: 356,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+                lineNumber: 355,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/seesim/app/dashboard/DashboardClient.tsx",
+        lineNumber: 278,
+        columnNumber: 5
+    }, this);
+}
+}),
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__3a608062._.js.map

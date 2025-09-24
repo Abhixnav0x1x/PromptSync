@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "/(auth)/signup/page": [
+      "static/chunks/62a81_next_dist_d4c8adff._.js",
+      "static/chunks/seesim_app_favicon_ico_mjs_7a603109._.js",
+      "static/chunks/[root-of-the-server]__ad939c01._.css",
+      "static/chunks/seesim_app_layout_tsx_71a3b2ab._.js",
+      "static/chunks/62a81_next_dist_client_components_builtin_global-error_20254af2.js",
+      "static/chunks/node_modules_@supabase_node-fetch_browser_ebbd8575.js",
+      "static/chunks/_1153033a._.js",
+      "static/chunks/seesim_d0a8602d._.js",
+      "static/chunks/seesim_app_(auth)_signup_page_tsx_20254af2._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_7d82383b._.js",
+      "static/chunks/62a81_next_dist_compiled_react-dom_94e4e8c7._.js",
+      "static/chunks/62a81_next_dist_compiled_next-devtools_index_e490d6cd.js",
+      "static/chunks/62a81_next_dist_compiled_d3e05527._.js",
+      "static/chunks/62a81_next_dist_client_e7c7c44e._.js",
+      "static/chunks/62a81_next_dist_2d823e70._.js",
+      "static/chunks/62a81_@swc_helpers_cjs_a1da657e._.js",
+      "static/chunks/seesim_a0ff3932._.js",
+      "static/chunks/turbopack-seesim_6c377694._.js"
+    ]
+  }
+}
